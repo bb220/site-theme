@@ -1,3 +1,5 @@
+My personal fork of the Edition ghost theme.
+
 # Edition
 
 The newsletter theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Edition! If you're just looking to download the latest release, download the theme [here](https://github.com/TryGhost/Edition/archive/refs/heads/main.zip).
@@ -32,6 +34,3 @@ yarn zip
 # Copyright & License
 
 Copyright (c) 2013-2021 Ghost Foundation - Released under the [MIT license](LICENSE).
-# site-theme
-# site-theme
-# site-theme
