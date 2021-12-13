@@ -1,0 +1,49 @@
+<div class="cover{{#if @site.cover_image}} image-loading{{/if}}{{#match @custom.publication_cover_style "Half screen"}} half{{/match}}">
+    {{#if @site.cover_image}}
+        <img class="cover-image u-object-fit" src="{{@site.cover_image}}" alt="{{@site.title}}">
+    {{/if}}
+
+    <div class="cover-content container">
+        {{#if @site.description}}
+            <div class="cover-description">
+                {{#if @custom.email_signup_text}}
+                    {{@custom.email_signup_text}}
+                {{else}}
+                    <p class="description-title">Brandon Bellero</p>
+                    {{!-- {{@site.description}} --}}
+                    <p class="description-details">I solve problems with technology.  Currently, I'm a product manager solving problems in the B2B space.</p>
+                    <p class="description-details">My posts share from my experiences building software, products, teams, and businesses.</p>
+                {{/if}}
+                <div class="social">
+                    <a class="social-item social-item-linkedin" href="https://www.linkedin.com/in/brandon-bellero" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn">
+                        {{> icons/linkedin}}
+                    </a>
+                
+                    {{#if @site.twitter}}
+                    <a class="social-item social-item-twitter" href="{{twitter_url @site.twitter}}" target="_blank"
+                        rel="noopener noreferrer" aria-label="Twitter">
+                        {{> icons/twitter}}
+                    </a>
+                    {{/if}}
+                </div>
+            </div>
+        {{/if}}
+
+        {{#unless @member}}
+            <form class="form-wrapper cover-form" data-members-form>
+                <input class="auth-email" type="email" data-members-email placeholder="Your email address" required="true" autocomplete="false">
+
+                <button class="form-button" type="submit" aria-label="Submit">
+                    <span class="default">Subscribe</span>
+                    <span class="loader">{{> icons/loader}}</span>
+                    <span class="success">Email sent</span>
+                </button>
+            </form>
+        {{/unless}}
+    </div>
+
+    <button class="button-icon cover-arrow">
+        {{> icons/chevron-right}}
+    </button>
+</div>

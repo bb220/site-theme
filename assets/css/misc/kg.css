@@ -1,0 +1,63 @@
+.kg-gallery-image {
+    cursor: pointer;
+}
+
+.kg-image {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.kg-embed-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.kg-toggle-heading-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.has-serif-title .kg-toggle-heading-text {
+    font-family: var(--font-serif);
+}
+
+.kg-toggle-content > * + * {
+    margin: 2rem 0 0;
+}
+
+blockquote.kg-blockquote-alt {
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.6;
+    color: var(--secondary-text-color);
+}
+
+.kg-canvas {
+    display: grid;
+    grid-template-columns:
+        [full-start]
+        minmax(5vw, auto)
+        [wide-start]
+        minmax(auto, 100px)
+        [main-start]
+        min(720px, calc(100% - 10vw))
+        [main-end]
+        minmax(auto, 100px)
+        [wide-end]
+        minmax(5vw, auto)
+        [full-end];
+}
+
+.kg-canvas > * {
+    grid-column: main-start/main-end;
+}
+
+.kg-width-wide {
+    grid-column: wide-start/wide-end;
+}
+
+.kg-width-full {
+    grid-column: full-start/full-end;
+}
